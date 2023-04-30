@@ -27,7 +27,7 @@ export PATH="$RTOSExploration/bin-wrapper:$PATH"
 export WLLVM_OUTPUT_LEVEL=INFO \
        LLVM_COMPILER=hybrid \
        LLVM_COMPILER_PATH=/usr/lib/llvm-14/bin \
-       GCC_PATH="$(realpath "$RTOSExploration/gcc-arm-none-eabi-9-2019-q4-major/bin/")" \
+       GCC_PATH="$RTOSExploration/toolchain/gcc-arm-none-eabi-9-2019-q4-major/bin/" \
        GCC_CROSS_COMPILE_PREFIX=arm-none-eabi- \
        LLVM_BITCODE_GENERATION_FLAGS="-Wno-c++11-narrowing"
 for SRC_DIR in $(find . -type d -exec test -f '{}'/CMakeLists.txt \; -print -prune); do
